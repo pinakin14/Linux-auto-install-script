@@ -1,6 +1,6 @@
 #!/bin/bash
 cd Desktop
-echo Linux install script version 1.1
+echo Linux install script version 2.1
 echo by Pinakin Kale
 echo starting up
 echo .
@@ -10,9 +10,15 @@ echo starting
 echo Updating Everything!
 sudo apt update
 sudo apt full-upgrade -y
+sudo grub-install /dev/sda
+sudo update-grub
+sudo dpkg --configure -a 
 #Apt Installs
+sudo apt install wget -y
+sudo apt install snap -y 
+sudo apt-get install tasksel
 sudo apt-get install htop -y
-sudo apt-get openssh-server -y
+sudo apt-get install openssh-server 
 sudo apt install xrdp xorgxrdp -y
 sudo apt-get install audacity -y
 sudo apt-get install psensor -y
@@ -24,9 +30,14 @@ sudo apt install net-tools -y
 sudo apt install libreoffice -y
 sudo apt install vlc -y
 sudo apt install audacity -y
+sudo apt install mysql-server -y
+sudo apt install curl -y
+sudo apt install php libapache2-mod-php php-mysql -y
 #snap installs
 sudo snap install spotify 
 sudo snap install code --classic
+#misc installs
+
 #Second Upgrade
 echo Hold on a sec
 sudo apt update
@@ -42,8 +53,8 @@ sudo apt install sysvbanner -y
 echo Now watch this cool train
 sl
 clear 
-Banner Done!
+banner Done!
 echo Made by Pinakin Kale 2020
 
 
-#Made By Pinakin Kale 7/20/20. For Ubuntu Based installs only
+#Made By Pinakin Kale 7/20/20. For Ubuntu/Debian Based installs only
